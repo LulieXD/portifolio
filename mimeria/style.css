@@ -1,0 +1,46 @@
+.hero {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   padding: 12% 15%;
+   background: radial-gradient(circle at 75% 30%) var(---acent glow) 0%, transparent 30%;
+
+}
+
+.hero-content{
+   flex: 1;
+   padding-right: 5rem;
+
+}
+
+.navbar{
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding: 1.5rem 5%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: rgba(10, 10, 10, 0.95);
+   backdrop-filter: blur(18px);
+   z-index: 1000;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.logo{
+   font-size: 1.8rem;
+   font-weight: 700;
+   color: var(--acent);
+   text-decoration: none;
+   position: relative;
+   padding-left: 2.5rem;
+
+}
+
+.navlinks{
+   display: flex;
+   gap: 2rem;
+   list-style: none;
+
+}
