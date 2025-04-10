@@ -1,25 +1,57 @@
-body{
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+   --dark-bg: #0a0a0a;
+   --darker-bg: #050505;
+   --accent: #ffffff;
+   --accent-glow: #ff008cb0;
+   --text: #ffffff;
+}
+
+body {
    margin: 0;
    padding-top: 60px;
-   text-align: center;  
+   text-align: center;
+   background-color: var(--darker-bg);
+   color: var(--text);
+   line-height: 1.6;
+   overflow-x: hidden;
+}
+
+p {
+   margin: 2rem;
+   text-align: justify;
+}
+
+h1 {
+   margin: 4rem;
+   text-align: justify;
 }
 
 .hero {
-   min-height: 100vh;
+   min-height: 0vh;
    display: flex;
    align-items: center;
-   padding: 12% 15%;
-   background: radial-gradient(circle at 75% 30%) var(---acent glow) 0%, transparent 30%;
-
+   text-align: justify;
+   padding: 5% 15%;
+   background: radial-gradient(circle at 73% 10%, var(--accent-glow) 0%, transparent 39%);
 }
 
-.hero-content{
+.hero-content {
    flex: 1;
-   padding-right: 5rem;
+   padding-right: 2.5rem;
 
 }
+.hero-content h1 {
+   margin-bottom: 1rem;
+}
 
-.navbar{
+.navbar {
    position: fixed;
    top: 0;
    width: 100%;
@@ -27,38 +59,35 @@ body{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background: rgba(231, 59, 174, 0.95);
+   background: #e73baef2;
    backdrop-filter: blur(18px);
    z-index: 1000;
    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
-.logo{
+.logo {
    font-size: 1.8rem;
    font-weight: 700;
-   color: var(--acent);
+   color: var(--accent);
    text-decoration: none;
    position: relative;
    padding-left: 0.05rem;
-
 }
 
-.navlinks{
+.navlinks {
    display: flex;
    gap: 2rem;
    list-style: none;
-
 }
 
-.navlinks a{
+.navlinks a {
    color: var(--text);
    text-decoration: none;
    font-weight: 500;
-
+   position: relative;
 }
 
-.navlinks a::after{
+.navlinks a::after {
    content: '';
    position: absolute;
    bottom: -5px;
@@ -67,10 +96,20 @@ body{
    height: 2px;
    background: var(--accent);
    transition: width 0.3s ease;
-
 }
 
-.navlinks a:hover::after{
+.navlinks a:hover::after {
    width: 100%;
+}
+
+/*pego em I.A e modificado por mim*/
+.profile-img {
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 5px solid var(--accent);
+   box-shadow: 0 0 10px var(--accent-glow);
 
 }
+
